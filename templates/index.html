@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <title>Research Papa</title>
+</head>
+<body>
+
+
+<nav>
+  <ul>
+    <li> <h3><a href="index.html"><i class="fa-solid fa-book-open"></i>&ensp;Research Papa</a></h3></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#Github"><i class="fab fa-github"></i><span class="sr-only">Github</span></a></li>
+    <li><a href="#Login" class="login">Login</a></li>
+  </ul>
+</nav>
+
+
+<section id="intro">
+<p> Hi! Welcome to </p>
+  <span><h2> <a>Research Papa </a></h2></span>
+  <h2> Unlock all the secrets in your research paper </h2>
+  <p> Research papa gives you a better understanding to the research paper you wanna read </p>
+</section>
+
+<div class="gradient"> </div>
+
+
+
+<section id="content">
+
+<h2> Steps of how this works </h2>
+
+<article>
+  <div class="text">
+    <h4> Step 1 </h4>
+    <p class="blackbox"> Upload the pdf file : <br> We recommend you adding a pdf format file . File size shouldn't be too big (maximmum 5 mb) </p>
+  </div>
+    <img src="{{url_for('static',filename='images/3.png')}}" alt="3rd image" width=320 height=250>
+</article>
+
+
+<article class="reverse">
+  <div class="text_reverse">
+    <h4> Step 2 </h4>
+    <p class="blackbox"> Have a look at the seperated sections <br> These sections are distributed so you can understand the paper in a better manner. Give your opinion about the section in the text boxes provided to get a better understanding.</p>
+  </div>
+    <img src="{{url_for('static',filename='images/2.png')}}" alt="2nd image" width=320 height=250>
+</article>
+
+
+
+<article>
+  <div class="text">
+    <h4> Step 3 </h4>
+    <p class="blackbox"> Now you have done all you can . Last step is to have a look at what others thought about the research paper. We will provide u review of sections from other users if the paper is in our database. Making your understanding a bit better by giving you a out of the box opinions from people all over the world.</p>
+  </div>
+    <img src="{{url_for('static',filename='images/1.png')}}" alt="1st image" width=320 height=250>
+</article>
+</section>
+<div class="gradient"></div>
+<section id="tryit">
+
+   <a href="{{url_for('upload_file')}}"><button class="btn draw-border">Try It</button></a>
+
+ </section>
+
+
+<div class="gradient"> </div>
+
+<section id="contact">
+<h2> Contact Me </h2>
+<p> to know more about the product </p>
+<p> to give feedback about the product </p>
+<a href="email">Email</a>
+</section>
+
+<div class="gradient"> </div>
+
+
+<section id="Footer">
+   <p><h2>Puru Behl &middot; Data scientist </h2> </p>
+
+    <p><a href="LK" class="Footer"><i class="fab fa-linkedin"></i><span class="sr-only">Linkdin</span></a><a href="Git" class="Footer">       <i class="fab fa-github"></i><span class="sr-only">Github</span></a> <a href="email" class="Footer">         <i class="fas fa-envelope"></i><span class="sr-only"> Email </span></a> <br></p>
+
+    <p><a> &copy; 2022 Puru Behl. All rights reserved.</a> </p>
+</section>
+</body>
+</html>
+

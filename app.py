@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def simple():
-   return "Hellow world"
+   return render_template('index.html')
    
 @app.route('/upload')
 def upload_file():

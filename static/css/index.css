@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Montserrat&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css") ;
+
+h1,h2,h3 {
+  margin:0 ;
+}
+
+:root {
+      --black: #171321;
+
+  --white : #D8FFDB ;
+  --lime : #A0CD60 ;
+  --blue : #1C646D ;
+  --brown : #1F0802 ;
+  --purple : #38184C ;
+/*  --dkblue : #042326;
+*/
+  --dkblue : #1A1931 ;
+  --magenta: #e310cb;
+  --hotmag: #ff17e4;
+  --seashell : #F7D6D0 ;
+  --peach : #FFE5B4 ;
+      --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+        --dkblue2: #0d314b;
+
+
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+  background-color: var(--dkblue);
+  color: var(--white);
+}
+
+
+nav {
+  background-color:var(--dkblue) ;
+  font-size:80% ;
+  padding:1rem ;
+  
+}
+
+nav ul {
+  list-style-type : none ;
+  padding:0 ;
+  margin:0 ;
+  display:flex ;
+  flex-flow : row wrap ;
+  justify-content :center ;
+  align-items :center ;
+  gap : 2rem ;
+  
+}
+nav a {
+    text-decoration:none ;
+  color:var(--white) ;
+  display : block ;
+}
+
+
+nav a:hover {
+  color : var(--lime) ;
+}
+
+nav li:first-child{
+  font-size: 130%;
+  flex-basis:100% ;
+  text-align:center ;
+}
+
+@media(min-width : 850px) {
+  
+  nav{margin : 0 auto ;
+  max-width : 1250px ;}
+
+  nav li:first-child {
+    flex-basis : auto ;
+    text-align : left ;
+    margin-right : auto ;
+  }
+}
+
+.login{
+  background-color : var(--magenta) ;
+  padding : 0.5rem ;
+  border-radius : 5px ;
+}
+
+.login:hover {
+  color : var(--white) ;
+  background-color : var(--hotmag) ;
+}
+
+nav [class*="fa-"]{
+  font-size : 140% ;
+  color : var(--aqua) ;
+}
+
+nav [class*="fa-"]:hover{
+  color : var(--magenta) ;
+}
+
+#intro {
+  padding: 4rem 1rem 10rem 1rem;
+  max-width: 1200px;
+  margin:  0 auto;
+  color: var(--white);
+  background-color: var(--dkblue);
+}
+#intro h2 a {
+  
+  font-size : 125% ;
+  color :  var(--aqua);
+
+}
+
+#intro span {
+  padding: 1rem;
+}
+
+#contact {
+  background-color : var(--plum) ;
+  color : var(--white) ;
+  text-align : center ;
+}
+
+#contact a {
+  color : var(--magenta) ;
+}
+
+#contact a:hover {
+  color : var(--white) ;
+  text-decoration : none ;
+}
+
+#Footer {
+  background-color : var(--dkblue) ;
+  color : var(--white) ;
+  list-style-type : none ;
+  padding:0 ;
+  margin:0 ;
+  text-align: center;
+  gap: 1rem ;}
+
+#Footer p{
+    list-style-type : none ;
+  padding:0 ;
+  margin:0.5rem ;
+  display:flex ;
+  flex-flow : row wrap ;
+  justify-content :center ;
+  align-items :center ;
+  gap : 1rem ;
+  flex-basis : 100% ;
+}
+
+#Footer p a i{
+  font-size: 176%;
+  color: var(--magenta);
+}
+
+.gradient {
+  background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  height: 2px;
+}
+
+
+/* projects section */
+#content {
+  background-color: var(--dkblue2);
+  padding: 4rem 1rem;
+  margin: 2rem;
+}
+#content h2 {
+    padding: 4rem;
+    font-size: 2rem;
+    margin-bottom: calc(2rem * 1.5);
+}
+#content h3 {
+    color: var(--aqua);
+}
+
+#content h4 {
+  font-size: 1rem;
+  font-family: var(--mono);
+  color : var(--aqua) ;
+  margin: 0;
+}
+.blackbox {
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--black);
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+#content img {
+    margin: 2rem 0 4rem 0;
+    padding: 1rem;
+    border-left: 1px solid var(--aqua);
+    border-top: 1px solid var(--aqua);
+    border-radius: 25px;
+}
+
+@media (min-width: 800px) {
+  article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+  }
+  #content img {
+    grid-column: 2/6;
+    grid-row: 1/2;
+  }
+  .text {
+    grid-column: 5/11;
+    grid-row: 1/2;
+    order: 2;
+    text-align: right;
+  }
+
+  #content .reverse img {
+    grid-column :8/11 ;
+    grid-row :1/2 ;
+  }
+  
+ 
+  .text_reverse {
+    grid-column:2/6 ;
+    grid-row : 1/2 ;
+    order :2 ;
+    text-align :left ;
+  }
+  
+}
+
+
+
+/*Adding the code for the trying it button
+*/
+#tryit{
+  text-align: center;
+  text-decoration: none;
+  }
+
+.draw-border {
+   box-shadow: inset 0 0 0 4px #58afd1;
+   color: #58afd1;
+   transition: color 0.25s 0.0833333333s;
+   position: relative;
+}
+ .draw-border::before, .draw-border::after {
+   border: 0 solid transparent;
+   box-sizing: border-box;
+   content: '';
+   pointer-events: none;
+   position: absolute;
+   width: 0;
+   height: 0;
+   bottom: 0;
+   right: 0;
+}
+ .draw-border::before {
+   border-bottom-width: 4px;
+   border-left-width: 4px;
+}
+ .draw-border::after {
+   border-top-width: 4px;
+   border-right-width: 4px;
+}
+ .draw-border:hover {
+   color: #ffe593;
+}
+ .draw-border:hover::before, .draw-border:hover::after {
+   border-color: #ffe593;
+   transition: border-color 0s, width 0.25s, height 0.25s;
+   width: 100%;
+   height: 100%;
+}
+ .draw-border:hover::before {
+   transition-delay: 0s, 0s, 0.25s;
+}
+ .draw-border:hover::after {
+   transition-delay: 0s, 0.25s, 0s;
+}
+ .btn {
+   background: none;
+   border: none;
+   cursor: pointer;
+   line-height: 1.5;
+   font: 700 1.2rem 'Roboto Slab', sans-serif;
+   padding: 1rem 2rem;
+   letter-spacing: 0.05rem;
+   margin: 2rem;
+
+}
+ .btn:focus {
+   outline: 2px dotted #55d7dc;
+}
+
