@@ -11,6 +11,7 @@ from operator import itemgetter
 import fitz
 import json
 import hashlib
+import re
 
 
 def fonts(doc, granularity=False):
@@ -243,6 +244,7 @@ def return_segmented_text(path,with_text=False) :
                 s=s.replace("<h4>","")
                 s=s.replace("|","")
                 s=s.replace("  ","")
+                s=s.lstrip('0123456789.- ')
                 k.append(s)
                 if len(k)==1 :
                     pass
@@ -252,7 +254,9 @@ def return_segmented_text(path,with_text=False) :
                 
                 
             else :
-                text+=i
+                b=cleanhtml(i)
+                b=b.replace('|', '\n')
+                text+=b
         dic[k[-1]]=text
         return dic
     else:
@@ -287,9 +291,7 @@ def return_segmented_text(path,with_text=False) :
 
 
 
-
-
-
-
-
-
+def cleanhtml(raw_html):
+    CLEANR = re.compile('<.*?>') 
+    cleantext = re.sub(CLEANR, '', raw_html)
+    return cleantext

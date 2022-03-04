@@ -11,6 +11,16 @@
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <nav>
+  <ul>
+    <li> <h3><a href="{{url_for('simple')}}"><i class="fa-solid fa-book-open"></i>&ensp;Research Papa</a></h3></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://github.com/PuruBehl"><i class="fab fa-github"></i><span class="sr-only">Github</span></a></li>
+    <li><a href="#Login" class="login">Login</a></li>
+  </ul>
+</nav>
+
 <div class="wrapper center-block">
   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
     {% for e in dictionary_headings %}
@@ -25,7 +35,7 @@
     </div>
     <div id="{{dictionary_headings[e][1]}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="head">
       <div class="panel-body">
-       {{dictionary_headings[e]}}
+       {{dictionary_headings[e][0]}}
       </div>
     </div>
   </div>

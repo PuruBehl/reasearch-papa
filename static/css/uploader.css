@@ -1,7 +1,124 @@
-body{
+@import url("https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Montserrat&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css") ;
+
+h1,h2,h3 {
+  margin:0 ;
+}
+
+:root {
+      --black: #171321;
+
+  --white : #D8FFDB ;
+  --lime : #A0CD60 ;
+  --blue : #1C646D ;
+  --brown : #1F0802 ;
+  --purple : #38184C ;
+/*  --dkblue : #042326;
+*/
+  --dkblue : #1A1931 ;
+  --magenta: #e310cb;
+  --hotmag: #ff17e4;
+  --seashell : #F7D6D0 ;
+  --peach : #FFE5B4 ;
+      --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+        --dkblue2: #0d314b;
+
+
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+  background-color: var(--dkblue);
+}
+
+/*body{
   padding:50px;
   background:#fff;
+}*/
+
+
+nav {
+  background-color:var(--dkblue) ;
+  font-size:80% ;
+  padding:1rem ;
+  
 }
+
+nav ul {
+  list-style-type : none ;
+  padding:0 ;
+  margin:0 ;
+  display:flex ;
+  flex-flow : row wrap ;
+  justify-content :center ;
+  align-items :center ;
+  gap : 2rem ;
+  
+}
+nav a {
+    text-decoration:none ;
+  color:var(--white) ;
+  display : block ;
+}
+
+
+nav a:hover {
+  color : var(--lime) ;
+}
+
+nav li:first-child{
+  font-size: 130%;
+  flex-basis:100% ;
+  text-align:center ;
+}
+
+@media(min-width : 850px) {
+  
+  nav{margin : 0 auto ;
+  max-width : 1250px ;}
+
+  nav li:first-child {
+    flex-basis : auto ;
+    text-align : left ;
+    margin-right : auto ;
+  }
+}
+
+.login{
+  background-color : var(--magenta) ;
+  padding : 0.5rem ;
+  border-radius : 5px ;
+}
+
+.login:hover {
+  color : var(--white) ;
+  background-color : var(--hotmag) ;
+}
+
+nav [class*="fa-"]{
+  font-size : 140% ;
+  color : var(--aqua) ;
+}
+
+nav [class*="fa-"]:hover{
+  color : var(--magenta) ;
+}
+
+
 .wrapper{
   width:70%;
 }
@@ -17,7 +134,7 @@ body{
 .panel-title>a, .panel-title>a:active{
   display:block;
   padding:15px;
-  color:#555;
+  color:var(--dkblue);
   font-size:16px;
   font-weight:bold;
   text-transform:uppercase;
