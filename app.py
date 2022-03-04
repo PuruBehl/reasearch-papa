@@ -24,8 +24,12 @@ def upload_file2():
       dic = rp.return_segmented_text(path,with_text=True)
       os.remove(path)
 
+      count=0
+
       for i in dic :
-         dic[i]=dic[i].encode('utf-8', 'replace').decode()
+         count+=1
+         dic[i]=[dic[i].encode('utf-8', 'replace').decode(),count]
+
 
       return render_template("uploader.html",dictionary_headings=dic)
    return "No content"
