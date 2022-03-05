@@ -4,17 +4,13 @@ import research_papa_python_script as rp
 import os
 from flask_pymongo import PyMongo
 import urllib
-from flask_login import LoginManager, UserMixin ,login_user,login_required,current_user,logout_user   
-from boto.s3.connection import S3Connection
-
-
-s3 = S3Connection(os.environ['str1'], os.environ['str2'] , os.environ['str3'])
+from flask_login import LoginManager, UserMixin ,login_user,login_required,current_user,logout_user 
 
 app = Flask(__name__)
 
 # Setting up the information for the database here
 # Getting the uri string
-uri_string=s3[0]+urllib.parse.quote(s3[1])+s3[2]
+uri_string=os.environ['str1']+urllib.parse.quote(os.environ['str2'])+os.environ['str3']
 
 # Adding the pymongo database
 mongodb_client = PyMongo(app, uri=uri_string)
