@@ -32,8 +32,12 @@
    <title>upload document - research papa</title>
    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/upload.css')}}">
    <script type="text/javascript" src="{{url_for('static',filename='js/upload.js')}}"></script>
+       <link rel="stylesheet" href="{{url_for('static',filename='css/navbar.css')}}">
+
 </head>
    <body>
+      {% include 'navbar.html' %}
+
  <form action="http://127.0.0.1:5000/uploader" method="POST" enctype = "multipart/form-data">
   <input type="file" name="file" />
   <p>Drag your files here or click in this area.</p>

@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/navbar.css')}}">
+
     <title>Research Papa</title>
 </head>
 <body>
 
 
-<nav>
+<!-- <nav>
   <ul>
     <li> <h3><a href="{{url_for('simple')}}"><i class="fa-solid fa-book-open"></i>&ensp;Research Papa</a></h3></li>
     <li><a href="#about">About</a></li>
@@ -17,7 +19,10 @@
     <li><a href="https://github.com/PuruBehl"><i class="fab fa-github"></i><span class="sr-only">Github</span></a></li>
     <li><a href="#Login" class="login">Login</a></li>
   </ul>
-</nav>
+</nav> -->
+
+{% include 'navbar.html' %}
+
 
 
 <section id="intro">
